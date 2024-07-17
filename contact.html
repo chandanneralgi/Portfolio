@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Chandan Neralgi</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+
     <style>
         body {
             background: linear-gradient(45deg, #6ab7ff, #9effff);
@@ -16,10 +21,10 @@
     </style>
 </head>
 <body>
-    <header class="bg-dark text-white p-3">
+    <header class="bg-dark text-white p-1">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#">Portfolio</a>
+                <a class="navbar-brand" href="#">Brainwaves</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -28,62 +33,53 @@
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="contact container my-5">
-        <h1 class="text-center">Contact Me</h1>
-        <div class="contact-info row">
-            <div class="col-md-8 offset-md-2">
-                <form action="send_mail.php" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+    <section id="contact" class="container shadow">
+        <div class="section-content">
+            <h1 class="section-header">Get in <span class="content-header wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2s">Touch with me</span></h1>
+        </div>
+        <div class="contact-section">
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 form-line">
+                            <div class="form-group">
+                                <label for="exampleInputUsername">Your name</label>
+                                <input type="text" class="form-control" id="exampleInputUsername" placeholder="Enter Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail">Email Address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter Email id" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Mobile No.</label>
+                                <input type="tel" class="form-control" id="telephone" placeholder="Enter 10-digit mobile no." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="description">Message</label>
+                                <textarea class="form-control" id="description" placeholder="Enter Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message</button>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-
-    <!-- Offcanvas Sidebar -->
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasSidebar">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Social Links</h5>
-            <button type="button" class="close text-white" data-dismiss="offcanvas">
-                <span>&times;</span>
-            </button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link text-white" href="https://github.com/chandanneralgi" target="_blank">GitHub</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="https://www.linkedin.com/in/chandan-neralgi" target="_blank">LinkedIn</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="https://api.whatsapp.com/send?phone=9148273454" target="_blank">WhatsApp</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="mailto:chandanneralgi@gmail.com">Gmail</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="https://leetcode.com/Chandan9880/" target="_blank">LeetCode</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <button class="btn btn-primary fixed-bottom m-3" data-toggle="offcanvas" data-target="#offcanvasSidebar">Social Links</button>
-
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 </body>
 </html>
