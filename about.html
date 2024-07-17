@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Chandan Neralgi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #6ab7ff, #9effff);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+        }
+        .profile-img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        .skills-section .skill {
+            animation: slideIn 1s forwards;
+        }
+        .skills-section .skill:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+        .skills-section .skill:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+        .progress-bar {
+            width: 0;
+            animation: fillBar 2s forwards;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fillBar {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about container my-5">
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <img src="images/profile.jpg" class="profile-img" alt="Profile Image">
+            </div>
+            <div class="col-md-8">
+                <h2>Summary</h2>
+                <p>B. Tech in Computer Science Engineering (Artificial Intelligence & Machine Learning) from Dayananda Sagar University, Bangalore with a CGPA of 8.66, expected graduation in 2025. Strong skills in Java, Python, data analysis, and machine learning.</p>
+            </div>
+        </div>
+
+        <div class="skills-section mb-5">
+            <h2>Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill">
+                        <h5>Java</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%">5/5</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill">
+                        <h5>Python</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%">5/5</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more skills as needed -->
+            </div>
+        </div>
+
+        <div class="education-section mb-5">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>B. Tech in Computer Science Engineering</h5>
+                    <p>Dayananda Sagar University, Bangalore - CGPA: 8.66 (Expected 2025)</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>XII (PCMCs)</h5>
+                    <p>M.E.S Pre-University College, Sirsi (2021)</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>X (NCERT)</h5>
+                    <p>Ave Maria Highschool, Sirsi (2019)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-section mb-5">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <!-- Add experience items here -->
+            </div>
+        </div>
+
+        <div class="certifications-section mb-5">
+            <h2>Certifications</h2>
+            <ul>
+                <!-- Add certifications here -->
+            </ul>
+        </div>
+
+        <div class="achievements-section mb-5">
+            <h2>Achievements & Hobbies</h2>
+            <ul>
+                <!-- Add achievements and hobbies here -->
+            </ul>
+        </div>
+    </section>
+
+    <button onclick="topFunction()" id="toTopBtn" class="btn btn-primary fixed-bottom m-3">Move to Top</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("toTopBtn").style.display = "block";
+            } else {
+                document.getElementById("toTopBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

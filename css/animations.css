@@ -1,0 +1,90 @@
+/* General Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Applying Animations */
+.intro-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about .left-column {
+    animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.about .right-column {
+    animation: slideInFromRight 1.5s ease-in-out;
+}
+
+.project-item {
+    animation: slideInFromBottom 1.5s ease-in-out;
+}
+
+.contact-info {
+    animation: scaleUp 1.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
