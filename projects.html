@@ -21,59 +21,58 @@
 
 
         /*--------------------------------------------------------------
-# Team Section
+# project Section
 --------------------------------------------------------------*/
-.team .team-member {
+.project .project-member {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   border-radius: 5px;
   transition: 0.5s;
-  padding: 30px;
+  padding: 20px;
+  padding-top: 30px;
   height: 100%;
 }
 
 @media (max-width: 468px) {
-  .team .team-member {
+  .project .project-member {
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
   }
 }
 
-.team .team-member .pic {
-  overflow: hidden;
-  width: 150px;
-  border-radius: 50%;
+.project .project-member .pic {
+  width: 190px;
   flex-shrink: 0;
 }
 
-.team .team-member .pic img {
+.project .project-member .pic img {
   transition: ease-in-out 0.3s;
 }
 
-.team .team-member:hover {
+.project .project-member:hover {
   transform: translateY(-10px);
 }
 
-.team .team-member .member-info {
-  padding-left: 30px;
+.project .project-member .member-info {
+  padding-left: 13px;
 }
 
 @media (max-width: 468px) {
-  .team .team-member .member-info {
+  .project .project-member .member-info {
     padding: 30px 0 0 0;
     text-align: center;
   }
 }
 
-.team .team-member h4 {
+.project .project-member h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
 }
 
-.team .team-member span {
+.project .project-member span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
@@ -81,7 +80,7 @@
   font-weight: 500;
 }
 
-.team .team-member span::after {
+.project .project-member span::after {
   content: "";
   position: absolute;
   display: block;
@@ -93,17 +92,17 @@
 }
 
 @media (max-width: 468px) {
-  .team .team-member span::after {
+  .project .project-member span::after {
     left: calc(50% - 25px);
   }
 }
 
-.team .team-member p {
+.project .project-member p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
 
-.team .team-member .social {
+.project .project-member .social {
   margin-top: 12px;
   display: flex;
   align-items: center;
@@ -112,12 +111,12 @@
 }
 
 @media (max-width: 468px) {
-  .team .team-member .social {
+  .project .project-member .social {
     justify-content: center;
   }
 }
 
-.team .team-member .social a {
+.project .project-member .social a {
   background: color-mix(in srgb, var(--default-color), transparent 94%);
   transition: ease-in-out 0.3s;
   display: flex;
@@ -128,21 +127,21 @@
   height: 36px;
 }
 
-.team .team-member .social a i {
+.project .project-member .social a i {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-size: 16px;
   margin: 0 2px;
 }
 
-.team .team-member .social a:hover {
+.project .project-member .social a:hover {
   background: var(--accent-color);
 }
 
-.team .team-member .social a:hover i {
+.project .project-member .social a:hover i {
   color: var(--contrast-color);
 }
 
-.team .team-member .social a+a {
+.project .project-member .social a+a {
   margin-left: 8px;
 }
 
@@ -199,6 +198,12 @@
 }
 
 
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -221,39 +226,9 @@
         </div>
     </header>
 
-    <!-- <section class="projects container my-5">
-        <h1 class="text-center">Projects</h1>
-        <div class="row my-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Analyze Diwali sales data to improve customer experience and sales</h5>
-                        <p class="card-text">Data cleaning, EDA using pandas, matplotlib, seaborn.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Sentiment Analysis - Amazon Fine Food Reviews</h5>
-                        <p class="card-text">Sentiment analysis using machine learning techniques.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
-
-
-
-
-
-     <!-- Team Section -->
-     <section id="team" class="team section">
+     <!-- Project Section -->
+     <section id="project" class="project section">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -261,117 +236,165 @@
           <p>Featuring projects that exemplify technical precision and high standards of software engineering.</p>
         </div><!-- End Section Title -->
   
-        <div class="container">
+        <div class="container pb-5">
   
           <div class="row gy-4">
   
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+            <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-member d-flex align-items-start">
+                <div class="pic"><img src="assets/img/project/project-1.jpg" class="img-fluid" alt="Amazon Fine Food Reviews"></div>
                 <div class="member-info">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                  <h4>Sentiment-Analysis</h4>
+                  <span>Amazon Fine Food Reviews</span>
+                  <p>This project focused on performing sentiment analysis on the Amazon Fine Food Reviews dataset. The goal is to analyze customer reviews to determine their sentiment, whether positive or negative, and to gain insights into customer opinions to improve product offerings.</p>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                    <a href="https://github.com/chandanneralgi/Sentiment-Analysis---Amazon-Fine-Food-Reviews"><i class="bi bi-github"></i></a>
+                      <!-- <a href="https://example.com" class="visit-button">Visit</a> -->
                   </div>
                 </div>
               </div>
-            </div><!-- End Team Member -->
+            </div><!-- End project Member -->
   
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="./images/project2.jpg" class="img-fluid" alt=""></div>
+            <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-member d-flex align-items-start">
+                <div class="pic"><img src="./images/project2.jpg" class="img-fluid" alt="Diwali Sales Analysis"></div>
                 <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                  <h4>Diwali Sales Analysis</h4>
+                  <span>Sales Data Analysis</span>
+                  <p>This project analyzes Diwali sales data to enhance customer experience and boost sales. By cleaning and exploring the data using pandas, matplotlib, and seaborn, we identify key trends, potential customer demographics, and popular product categories to improve inventory planning.</p>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                    <a href="https://github.com/chandanneralgi/Diwali-Sales-Analysis"><i class="bi bi-github"></i></a>
+                      <!-- <a href="https://example.com" class="visit-button">Visit</a> -->
                   </div>
                 </div>
               </div>
-            </div><!-- End Team Member -->
+            </div><!-- End project Member -->
   
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+            <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="project-member d-flex align-items-start">
+                <div class="pic"><img src="./images/Decentralized_File_Sharing_System.png" class="img-fluid" alt="Decentralized File Sharing System"></div>
                 <div class="member-info">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                  <h4>Decentralized File Sharing System</h4>
+                  <span>Blockchain Based File Sharing</span>
+                  <p>The Blockchain-Based File Sharing System enables secure, decentralized peer-to-peer file sharing by encrypting files with AES, storing them on IPFS, and maintaining file hashes on a blockchain. A socket-programmed network ensures only authorized users can access the blockchain, ensuring data integrity and privacy.</p>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                    <a href="https://github.com/chandanneralgi/Decentralized-File-Sharing-System"><i class="bi bi-github"></i></a>
+                    <!-- <a href="https://example.com" class="visit-button">Visit</a> -->
                   </div>
                 </div>
               </div>
-            </div><!-- End Team Member -->
+            </div><!-- End project Member -->
   
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+            <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="project-member d-flex align-items-start">
+                <div class="pic"><img src="assets/img/project/project-4.jpg" class="img-fluid" alt="Indian Election Result Analysis"></div>
                 <div class="member-info">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                  <h4>Indian Election Result Analysis</h4>
+                  <span>Indian Loksabha Election 2024 Result Data Analysis</span>
+                  <p>This project analyzes the 2024 Lok Sabha election results to gain insights into party and candidate performance. Key aspects include victory margins, seat distribution, and vote counts for prominent figures, offering a comprehensive overview of the election outcomes and highlighting important trends.</p>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                    <a href="https://github.com/chandanneralgi/Indian-Loksabha-Election-2024-Result-Data-Analysis"><i class="bi bi-github"></i></a>
+                      <!-- <a href="https://example.com" class="visit-button">Visit</a> -->
                   </div>
                 </div>
               </div>
-            </div><!-- End Team Member -->
+            </div><!-- End project Member -->
 
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="team-member d-flex align-items-start">
-                  <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+            <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-member d-flex align-items-start">
+                  <div class="pic"><img src="assets/img/project/project-1.jpg" class="img-fluid" alt="Pneumonia Detection"></div>
                   <div class="member-info">
-                    <h4>Walter White</h4>
-                    <span>Chief Executive Officer</span>
-                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                    <h4>Pneumonia Detection</h4>
+                    <span>Pneumonia Detection Using Deep Learning</span>
+                    <!-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> -->
                     <div class="social">
-                      <a href=""><i class="bi bi-twitter-x"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""> <i class="bi bi-linkedin"></i> </a>
+                      <a href="https://github.com/chandanneralgi/Pneumonia-detection-using-Deep-Learning"><i class="bi bi-github"></i></a>
+                      <!-- <a href="https://example.com" class="visit-button">Visit</a> -->
                     </div>
                   </div>
                 </div>
-              </div><!-- End Team Member -->
+              </div><!-- End project Member -->
 
-              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="team-member d-flex align-items-start">
-                  <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-member d-flex align-items-start">
+                  <div class="pic"><img src="./images/InsightLens.png" class="img-fluid" alt="InsightLens"></div>
                   <div class="member-info">
-                    <h4>Walter White</h4>
-                    <span>Chief Executive Officer</span>
-                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                    <h4>InsightLens</h4>
+                    <span>Macroeconomics Data Visualization</span>
+                    <!-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> -->
                     <div class="social">
-                      <a href=""><i class="bi bi-twitter-x"></i></a>
-                      <a href=""><i class="bi bi-facebook"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""> <i class="bi bi-linkedin"></i> </a>
+                      <a href="https://github.com/chandanneralgi/Macroeconomics-Data-Visualization"><i class="bi bi-github"></i></a>
+                      <!-- <a href="https://example.com" class="visit-button">Visit</a> -->
                     </div>
                   </div>
                 </div>
-              </div><!-- End Team Member -->
+              </div><!-- End project Member -->
+
+              <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-member d-flex align-items-start">
+                  <div class="pic"><img src="./images/BeatWorks.png" class="img-fluid" alt="BeatWorks"></div>
+                  <div class="member-info">
+                    <h4>BeatWorks</h4>
+                    <span>Playing Different Instrumental Sounds</span>
+                    <!-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> -->
+                    <div class="social">
+                      <a href="https://github.com/chandanneralgi/BeatWorks"><i class="bi bi-github"></i></a>
+                      <a href="https://chandanneralgi.github.io/BeatWorks/" class="visit-button">Visit</a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End project Member -->
+
+              <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-member d-flex align-items-start">
+                  <div class="pic"><img src="./images/Text_to_Emoji.png" class="img-fluid" alt="Text to Emoji"></div>
+                  <div class="member-info">
+                    <h4>Text to Emoji</h4>
+                    <span>Message Encryption And Decryption</span>
+                    <!-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> -->
+                    <div class="social">
+                      <a href="https://github.com/chandanneralgi/Text_to_Emoji"><i class="bi bi-github"></i></a>
+                      <a href="https://chandanneralgi.github.io/Text_to_Emoji/" class="visit-button">Visit</a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End project Member -->
+
+              <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-member d-flex align-items-start">
+                  <div class="pic"><img src="./images/Amazon_Clone.png" class="img-fluid" alt="Amazon Clone"></div>
+                  <div class="member-info">
+                    <h4>Amazon Clone</h4>
+                    <span>Basic Amazon Clone Project</span>
+                    <!-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> -->
+                    <div class="social">
+                      <a href="https://github.com/chandanneralgi/Basic-Amazon-Clone-Project"><i class="bi bi-github"></i></a>
+                      <a href="https://chandanneralgi.github.io/Basic-Amazon-Clone-Project/" class="visit-button">Visit</a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End project Member -->
+
+              <div class="col-lg-6 pt-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-member d-flex align-items-start">
+                  <div class="pic"><img src="./images/Pixel_Poetry.png" class="img-fluid" alt="Pixel Poetry"></div>
+                  <div class="member-info">
+                    <h4>Pixel Poetry</h4>
+                    <span>Showcasing photography</span>
+                    <!-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p> -->
+                    <div class="social">
+                      <a href="https://github.com/chandanneralgi/Pixel-Poetry"><i class="bi bi-github"></i></a>
+                      <a href="https://chandanneralgi.github.io/Pixel-Poetry/" class="visit-button">Visit</a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End project Member -->
   
           </div>
   
         </div>
   
-      </section><!-- /Team Section -->
+      </section><!-- /project Section -->
 
 
 
@@ -396,6 +419,11 @@
             </ul>
         </div>
     </div> -->
+
+
+    <footer>
+      <h6>2024 &copy; All Rights Reserved.</h6>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

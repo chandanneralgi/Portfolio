@@ -12,47 +12,364 @@
     <link rel="stylesheet" href="css/animations.css">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playwrite+DK+Loopet:wght@100..400&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(45deg, #48a2f6, #6ab7ff, #9effff, #a3ffff, #6ab7ff, #48a2f6);
             background-size: 400% 400%;
             animation: gradientBackground 5s ease infinite;
         }
-        .profile-img {
-            max-width: 100%;
-            border-radius: 50%;
-        }
-        .skills-section .skill {
-            animation: slideIn 1s forwards;
-        }
-        .skills-section .skill:nth-child(odd) {
-            animation-delay: 0.2s;
-        }
-        .skills-section .skill:nth-child(even) {
-            animation-delay: 0.4s;
-        }
-        .progress-bar {
-            width: 0;
-            animation: fillBar 2s forwards;
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes fillBar {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
+
+        /*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about{
+    padding-top: 0px;
+}
+
+.info{
+    font-size: 18px;
+    font-weight:500;
+    color: black;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about ul li {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.about ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--accent-color);
+}
+
+.about .read-more {
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 1px;
+  padding: 8px 28px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--accent-color);
+}
+
+.about .read-more i {
+  font-size: 20px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.about .read-more:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.about .read-more:hover i {
+  transform: translate(5px, 0);
+}
+
+.profile-img {
+    height: 420px;
+    width: 290px; 
+}
+
+
+
+.about h2 {
+    margin-top: 1rem;
+    color: black;
+}
+/*--------------------------------------------------------------
+# Why Us Section
+--------------------------------------------------------------*/
+.why-me {
+  padding: 30px 0;
+}
+
+.why-me .content h3 {
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.why-me .content p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.why-me .faq-container .faq-item {
+  background-color: var(--surface-color);
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.why-me .faq-container .faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.why-me .faq-container .faq-item h3 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  margin: 0 30px 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.why-me .faq-container .faq-item h3 span {
+  color: var(--accent-color);
+  padding-right: 5px;
+  font-weight: 600;
+}
+
+.why-me .faq-container .faq-item h3:hover {
+  color: var(--accent-color);
+}
+
+.why-me .faq-container .faq-item .faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.why-me .faq-container .faq-item .faq-content p {
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.why-me .faq-container .faq-item .faq-icon {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  font-size: 22px;
+  line-height: 0;
+  transition: 0.3s;
+  color: var(--accent-color);
+}
+
+.why-me .faq-container .faq-item .faq-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  line-height: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.why-me .faq-container .faq-item .faq-toggle:hover {
+  color: var(--accent-color);
+}
+
+.why-me .faq-container .faq-active h3 {
+  color: var(--accent-color);
+}
+
+.why-me .faq-container .faq-active .faq-content {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+.why-me .faq-container .faq-active .faq-toggle {
+  transform: rotate(90deg);
+  color: var(--accent-color);
+}
+
+.why-me .why-me-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-me .why-me-img img {
+  max-height: 70%;
+}
+
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.skills .content p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.skills .content p:last-child {
+  margin-bottom: 0;
+}
+
+.skills .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills .content ul li {
+  padding-bottom: 10px;
+}
+
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  color: var(--default-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: color-mix(in srgb, var(--heading-color), transparent 90%);
+  height: 10px;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--heading-color);
+}
+
+
+
+
+
+
+
+
+
+
+    @keyframes gradientBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .allSkills {
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 20px;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .allSkills ul {
+      list-style-type: none;
+      padding: 0px;
+    }
+
+    .allSkills li {
+      border-bottom: 1px solid #eaeaea;
+      padding: 10px 5px;
+      border-radius: 5px;
+    }
+
+    .allSkills li:last-child {
+      border-bottom: none;
+    }
+
+    .allSkills li strong {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      color: #0073e6;
+    }
+
+    .allSkills li span {
+      display: block;
+      font-size: 1em;
+      color: #555;
+    }
+
+    .allSkills li:hover {
+      background: #9ff1fc;
+      transition: background 0.3s;
+    }
+
+    @media (max-width: 600px) {
+      .allSkills {
+        padding: 15px;
+      }
+    }
+
+
+
+
+footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Padding top and bottom */
+  margin-top: 10px; /* Space above the footer */
+}
+
+footer h6 {
+  margin: 0; /* Remove default margin */
+  font-family: 'Arial, sans-serif'; /* Font style */
+  font-size: 16px; /* Font size */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+footer h6::after {
+  content: ''; /* Decorative line below the text */
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #f39c12; /* Gold color */
+  margin: 10px auto 0; /* Centered with margin */
+}
+
+
+    
+
+
     </style>
 </head>
 <body>
@@ -75,100 +392,154 @@
         </div>
     </header>
 
-    <section class="about container my-5">
-        <div class="row mb-5">
-            <div class="col-md-4">
-                <img src="images/profile.jpg" class="profile-img img-thumbnail" alt="Profile Image">
+    
+
+    <!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About Me</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 d-flex align-items-center">
+          <img src="images/profile.jpg" class="profile-img" alt="">
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+        <p class="info">I'm a Computer Science student specializing in Artificial Intelligence and Machine Learning at Dayananda Sagar University. <br> <br>
+
+          My education has provided me with a good foundation in programming, data structures, and front end development, complemented by an knowledge of AI and ML technologies. <br> <br>
+          
+          I'm committed to staying updated in this rapidly changing field, eager to use my skills to solve problems, foster innovation, and contribute to the dynamic realm of AI. Proficient in Java, C/C++, Python, database management, web development, and networking, I'm ready to develop meaningful solutions in software.</p>
+        <a href="contact.html" class="read-more"><span>Hire me</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+  
+      <!-- Why Us Section -->
+      <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
+  
+        <div class="container-fluid">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+  
+              <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+                <h3><span>Skills</span><strong>:</strong></h3>
+              </div>
+
+              <div class="allSkills">
+                <ul>
+                  <li><strong>Programming Languages:</strong> Java, C/C++, Python Programming </li>
+                  <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Bootstrap, jQuery, NodeJS, ExpressJS, EJS, Flask, ReactJS </li>
+                  <li><strong>Technologies & Tools:</strong> Windows, Linux/Unix, MySQL </li>
+                  <li><strong>Data Analysis & Machine Learning:</strong> NumPy, Pandas, Matplotlib, Seaborn, TensorFlow, Scikit-learn, Deep Learning, Natural Language Processing </li>
+                  <li><strong>Core Competencies:</strong> Artificial Intelligence, Machine Learning, Data Structures and Algorithms, Computer Networking, Database Management Systems, Object-Oriented Programming, Data Science, Data Analytics </li>
+                  <li><strong>Soft Skills:</strong> Team work, Problem Solving, Analytical, Communication, Leadership </li>
+                </ul>
+              </div>
+  
             </div>
-            <div class="col-md-8">
-                <h2>Summary</h2>
-                <p>B. Tech in Computer Science Engineering (Artificial Intelligence & Machine Learning) from Dayananda Sagar University, Bangalore with a CGPA of 8.66, expected graduation in 2025. Strong skills in Java, Python, data analysis, and machine learning.</p>
+  
+            <div class="col-lg-5 order-1 order-lg-2 why-me-img">
+              <img src="images/why-me.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
             </div>
+          </div>
+  
         </div>
+  
+      </section><!-- /Why Us Section -->
 
-        <div class="skills-section mb-5">
-            <h2>Skills</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="skill">
-                        <h5>Java</h5>
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%">5/5</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skill">
-                        <h5>Python</h5>
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%">5/5</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more skills as needed -->
+      <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
+  
+        <div class="container-fluid">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-5 order-2 order-lg-1 why-me-img">
+              <img src="images/why-me.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
             </div>
-        </div>
 
-        <div class="education-section mb-5">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h5>B. Tech in Computer Science Engineering</h5>
-                    <p>Dayananda Sagar University, Bangalore - CGPA: 8.66 (Expected 2025)</p>
-                </div>
-                <div class="timeline-item">
-                    <h5>XII (PCMCs)</h5>
-                    <p>M.E.S Pre-University College, Sirsi (2021)</p>
-                </div>
-                <div class="timeline-item">
-                    <h5>X (NCERT)</h5>
-                    <p>Ave Maria Highschool, Sirsi (2019)</p>
-                </div>
+            <div class="col-lg-7 d-flex flex-column justify-content-center order-1 order-lg-2">
+  
+              <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+                <h3><span>Education</span><strong>:</strong></h3>
+              </div>
+
+              <div class="allSkills">
+                <ul>
+                  <li><strong>B. Tech </strong> Dayananda Sagar University, Bangalore <span>Computer Science Engineering Specialized in Artificial Intelligence & Machine Learning</span> <span>CGPA: 8.66</span> <span>From 2021 to (Expecting) 2025</span></li>
+                  <li><strong>PUC </strong> M. E. S. Pre University College, Sirsi <span>PCMCs - (Physics, Chemisrty, Mathematics, Computer Science)</span> <span>Percentage: 80%</span> <span>From 2019 to 2021</span></li>
+                  <li><strong>SSLC</strong> Ave Maria High School, Sirsi <span>NCERT - (National Council of Educational Research and Training)</span> <span>Percentage: 85.44%</span> <span>From 2016 to 2019</span></li>
+                  <li><strong>Primary</strong> Ave Maria Higher Primary School, Sirsi <span>NCERT - (National Council of Educational Research and Training)</span> <span></span> <span>Till 2016</span></li>
+                </ul>
+              </div>
+  
             </div>
+          </div>
+  
         </div>
+  
+      </section><!-- /Why Us Section -->
 
-        <div class="experience-section mb-5">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <!-- Add experience items here -->
+
+
+
+
+      <!-- Why Us Section -->
+      <!-- <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
+  
+        <div class="container-fluid">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+  
+              <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+                <h3><span>Certifications</span><strong>:</strong></h3>
+              </div>
+
+              <div class="allSkills">
+                <ul>
+                  <li><strong>Complete JAVA and Data Structures and Algorithms</strong> <span>by Apna College</span> </li>
+                  <li><strong>Crash Course in Machine Learning</strong> <span>by Great Learning</span> </li>
+                  <li><strong>CSS Clearance Certificate </strong> <span>by HackerRank</span> </li>
+                </ul>
+              </div>
+  
             </div>
+  
+            <div class="col-lg-5 order-1 order-lg-2 why-me-img">
+              <img src="images/why-me.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+            </div>
+          </div>
+  
         </div>
+  
+      </section> -->
+      <!-- /Why Us Section -->
 
-        <div class="certifications-section mb-5">
-            <h2>Certifications</h2>
-            <ul>
-                <!-- Add certifications here -->
-            </ul>
-        </div>
 
-        <div class="achievements-section mb-5">
-            <h2>Achievements & Hobbies</h2>
-            <ul>
-                <!-- Add achievements and hobbies here -->
-            </ul>
-        </div>
-    </section>
 
-    <button onclick="topFunction()" id="toTopBtn" class="btn btn-primary fixed-bottom m-3">Move to Top</button>
+      <footer>
+        <h6>2024 &copy; All Rights Reserved.</h6>
+      </footer>
+
+      
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        window.onscroll = function() {scrollFunction()};
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("toTopBtn").style.display = "block";
-            } else {
-                document.getElementById("toTopBtn").style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
 </body>
 </html>

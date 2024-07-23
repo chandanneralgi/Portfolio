@@ -353,6 +353,7 @@ nav .social-links li {
   border-radius: 5px;
 }
 
+
 .project-info .btn:hover {
   background-color: #575757;
 }
@@ -525,6 +526,7 @@ textarea.form-control {
 @media (max-width: 575px) {
   .contact .php-email-form {
     padding: 20px;
+    margin-top: 50px;
   }
 }
 
@@ -623,3 +625,33 @@ textarea.form-control {
   margin-bottom: 0;
 }
 
+
+
+
+/*---------------------------------------------
+Footer Section
+---------------------------------------------*/
+
+footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Padding top and bottom */
+  margin-top: 10px; /* Space above the footer */
+}
+
+footer h6 {
+  margin: 0; /* Remove default margin */
+  font-family: 'Arial, sans-serif'; /* Font style */
+  font-size: 16px; /* Font size */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+footer h6::after {
+  content: ''; /* Decorative line below the text */
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #f39c12; /* Gold color */
+  margin: 10px auto 0; /* Centered with margin */
+}
