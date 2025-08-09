@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Chandan Neralgi</title>
@@ -13,366 +13,359 @@
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
 
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playwrite+DK+Loopet:wght@100..400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(45deg, #48a2f6, #6ab7ff, #9effff, #a3ffff, #6ab7ff, #48a2f6);
-            background-size: 400% 400%;
-            animation: gradientBackground 5s ease infinite;
-        }
-
-        /*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about{
-    padding-top: 0px;
-}
-
-.info{
-    font-size: 18px;
-    font-weight:500;
-    color: black;
-    font-family: "Karla", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-.about ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about ul li {
-  padding-bottom: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.about ul i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: var(--accent-color);
-}
-
-.about .read-more {
-  color: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 24px;
-  letter-spacing: 1px;
-  padding: 8px 28px;
-  border-radius: 5px;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--accent-color);
-}
-
-.about .read-more i {
-  font-size: 20px;
-  margin-left: 5px;
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.about .read-more:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.about .read-more:hover i {
-  transform: translate(5px, 0);
-}
-
-.profile-img {
-    height: 420px;
-    width: 290px; 
-}
-
-
-
-.about h2 {
-    margin-top: 1rem;
-    color: black;
-}
-/*--------------------------------------------------------------
-# Why Us Section
---------------------------------------------------------------*/
-.why-me {
-  padding: 30px 0;
-}
-
-.why-me .content h3 {
-  font-weight: 400;
-  font-size: 34px;
-}
-
-.why-me .content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.why-me .faq-container .faq-item {
-  background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.why-me .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.why-me .faq-container .faq-item h3 {
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.why-me .faq-container .faq-item h3 span {
-  color: var(--accent-color);
-  padding-right: 5px;
-  font-weight: 600;
-}
-
-.why-me .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.why-me .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.why-me .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.why-me .faq-container .faq-item .faq-icon {
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  font-size: 22px;
-  line-height: 0;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.why-me .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.why-me .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.why-me .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.why-me .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.why-me .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
-
-.why-me .why-me-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.why-me .why-me-img img {
-  max-height: 70%;
-}
-
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
-.skills .content h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.skills .content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.skills .content p:last-child {
-  margin-bottom: 0;
-}
-
-.skills .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills .content ul li {
-  padding-bottom: 10px;
-}
-
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  color: var(--default-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--heading-color), transparent 90%);
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--heading-color);
-}
-
-
-
-
-
-
-
-
-
-
-    @keyframes gradientBackground {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    .allSkills {
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin: 20px;
-      padding: 20px;
-      width: 100%;
-    }
-
-    .allSkills ul {
-      list-style-type: none;
-      padding: 0px;
-    }
-
-    .allSkills li {
-      border-bottom: 1px solid #eaeaea;
-      padding: 10px 5px;
-      border-radius: 5px;
-    }
-
-    .allSkills li:last-child {
-      border-bottom: none;
-    }
-
-    .allSkills li strong {
-      display: block;
-      font-size: 1.2em;
-      margin-bottom: 5px;
-      color: #0073e6;
-    }
-
-    .allSkills li span {
-      display: block;
-      font-size: 1em;
-      color: #555;
-    }
-
-    .allSkills li:hover {
-      background: #9ff1fc;
-      transition: background 0.3s;
-    }
-
-    @media (max-width: 600px) {
-      .allSkills {
-        padding: 15px;
-      }
-    }
-
-
-
-
-footer {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* White text color */
-  text-align: center; /* Center the text */
-  padding: 10px 0; /* Padding top and bottom */
-  margin-top: 10px; /* Space above the footer */
-}
-
-footer h6 {
-  margin: 0; /* Remove default margin */
-  font-family: 'Arial, sans-serif'; /* Font style */
-  font-size: 16px; /* Font size */
-  letter-spacing: 1px; /* Spacing between letters */
-}
-
-footer h6::after {
-  content: ''; /* Decorative line below the text */
-  display: block;
-  width: 50px;
-  height: 2px;
-  background-color: #f39c12; /* Gold color */
-  margin: 10px auto 0; /* Centered with margin */
-}
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playwrite+DK+Loopet:wght@100..400&display=swap" rel="stylesheet">
     
+    <style>
+      body {
+        background: linear-gradient(45deg, #48a2f6, #6ab7ff, #9effff, #a3ffff, #6ab7ff, #48a2f6);
+        background-size: 400% 400%;
+        animation: gradientBackground 5s ease infinite;
+      }
+
+      /*--------------------------------------------------------------
+      # About Section
+      --------------------------------------------------------------*/
+      .about{
+          padding-top: 0px;
+      }
+
+      .info{
+          font-size: 18px;
+          font-weight:500;
+          color: black;
+          font-family: "Karla", sans-serif;
+          font-optical-sizing: auto;
+          font-style: normal;
+      }
+
+      .about ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .about ul li {
+        padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      .about ul i {
+        font-size: 20px;
+        padding-right: 4px;
+        color: var(--accent-color);
+      }
+
+      .about .read-more {
+        color: var(--accent-color);
+        font-family: var(--heading-font);
+        font-weight: 500;
+        font-size: 24px;
+        letter-spacing: 1px;
+        padding: 8px 28px;
+        border-radius: 5px;
+        transition: 0.3s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--accent-color);
+      }
+
+      .about .read-more i {
+        font-size: 20px;
+        margin-left: 5px;
+        line-height: 0;
+        transition: 0.3s;
+      }
+
+      .about .read-more:hover {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+      }
+
+      .about .read-more:hover i {
+        transform: translate(5px, 0);
+      }
+
+      .profile-img {
+          height: 420px;
+          width: 290px; 
+      }
+
+
+
+      .about h2 {
+          margin-top: 1rem;
+          color: black;
+      }
+      /*--------------------------------------------------------------
+      # Why Us Section
+      --------------------------------------------------------------*/
+      .why-me {
+        padding: 30px 0;
+      }
+
+      .why-me .content h3 {
+        font-weight: 400;
+        font-size: 34px;
+      }
+
+      .why-me .content p {
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+      }
+
+      .why-me .faq-container .faq-item {
+        background-color: var(--surface-color);
+        position: relative;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .why-me .faq-container .faq-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .why-me .faq-container .faq-item h3 {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 24px;
+        margin: 0 30px 0 0;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .why-me .faq-container .faq-item h3 span {
+        color: var(--accent-color);
+        padding-right: 5px;
+        font-weight: 600;
+      }
+
+      .why-me .faq-container .faq-item h3:hover {
+        color: var(--accent-color);
+      }
+
+      .why-me .faq-container .faq-item .faq-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: 0.3s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .why-me .faq-container .faq-item .faq-content p {
+        margin-bottom: 0;
+        overflow: hidden;
+      }
+
+      .why-me .faq-container .faq-item .faq-icon {
+        position: absolute;
+        top: 22px;
+        left: 20px;
+        font-size: 22px;
+        line-height: 0;
+        transition: 0.3s;
+        color: var(--accent-color);
+      }
+
+      .why-me .faq-container .faq-item .faq-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 16px;
+        line-height: 0;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .why-me .faq-container .faq-item .faq-toggle:hover {
+        color: var(--accent-color);
+      }
+
+      .why-me .faq-container .faq-active h3 {
+        color: var(--accent-color);
+      }
+
+      .why-me .faq-container .faq-active .faq-content {
+        grid-template-rows: 1fr;
+        visibility: visible;
+        opacity: 1;
+        padding-top: 10px;
+      }
+
+      .why-me .faq-container .faq-active .faq-toggle {
+        transform: rotate(90deg);
+        color: var(--accent-color);
+      }
+
+      .why-me .why-me-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .why-me .why-me-img img {
+        max-height: 70%;
+      }
+
+      /*--------------------------------------------------------------
+      # Skills Section
+      --------------------------------------------------------------*/
+      .skills .content h3 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .skills .content p {
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+      }
+
+      .skills .content p:last-child {
+        margin-bottom: 0;
+      }
+
+      .skills .content ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .skills .content ul li {
+        padding-bottom: 10px;
+      }
+
+      .skills .progress {
+        height: 60px;
+        display: block;
+        background: none;
+        border-radius: 0;
+      }
+
+      .skills .progress .skill {
+        color: var(--default-color);
+        padding: 0;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 600;
+        font-family: var(--heading-font);
+      }
+
+      .skills .progress .skill .val {
+        float: right;
+        font-style: normal;
+      }
+
+      .skills .progress-bar-wrap {
+        background: color-mix(in srgb, var(--heading-color), transparent 90%);
+        height: 10px;
+      }
+
+      .skills .progress-bar {
+        width: 1px;
+        height: 10px;
+        transition: 0.9s;
+        background-color: var(--heading-color);
+      }
+
+
+
+      @keyframes gradientBackground {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .allSkills {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px;
+        padding: 20px;
+        width: 100%;
+      }
+
+      .allSkills ul {
+        list-style-type: none;
+        padding: 0px;
+      }
+
+      .allSkills li {
+        border-bottom: 1px solid #eaeaea;
+        padding: 10px 5px;
+        border-radius: 5px;
+      }
+
+      .allSkills li:last-child {
+        border-bottom: none;
+      }
+
+      .allSkills li strong {
+        display: block;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        color: #0073e6;
+      }
+
+      .allSkills li span {
+        display: block;
+        font-size: 1em;
+        color: #555;
+      }
+
+      .allSkills li:hover {
+        background: #9ff1fc;
+        transition: background 0.3s;
+      }
+
+      @media (max-width: 600px) {
+        .allSkills {
+          padding: 15px;
+        }
+      }
+
+
+
+
+      footer {
+        background-color: #333; /* Dark background color */
+        color: #fff; /* White text color */
+        text-align: center; /* Center the text */
+        padding: 10px 0; /* Padding top and bottom */
+        margin-top: 10px; /* Space above the footer */
+      }
+
+      footer h6 {
+        margin: 0; /* Remove default margin */
+        font-family: 'Arial, sans-serif'; /* Font style */
+        font-size: 16px; /* Font size */
+        letter-spacing: 1px; /* Spacing between letters */
+      }
+
+      footer h6::after {
+        content: ''; /* Decorative line below the text */
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: #f39c12; /* Gold color */
+        margin: 10px auto 0; /* Centered with margin */
+      }
 
 
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
+    
     <header class="bg-dark text-white p-0">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -391,42 +384,43 @@ footer h6::after {
             </nav>
         </div>
     </header>
+   
 
-    
+      <!-- About Section -->
+    <section id="about" class="about section">
 
-    <!-- About Section -->
-<section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Me</h2>
+        </div>
+        <!-- End Section Title -->
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>About Me</h2>
-  </div><!-- End Section Title -->
+        <div class="container">
 
-  <div class="container">
+          <div class="row gy-4">
 
-    <div class="row gy-4">
+            <div class="col-lg-4 d-flex align-items-center">
+                <img src="./images/profile.jpg" class="profile-img" alt="">
+            </div>
 
-      <div class="col-lg-4 d-flex align-items-center">
-          <img src="./images/profile.jpg" class="profile-img" alt="">
-      </div>
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+              <p class="info">I'm a Computer Science student specializing in Artificial Intelligence and Machine Learning at Dayananda Sagar University. <br> <br>
 
-      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-        <p class="info">I'm a Computer Science student specializing in Artificial Intelligence and Machine Learning at Dayananda Sagar University. <br> <br>
+                My education has provided me with a good foundation in programming, data structures, and front end development, complemented by an knowledge of AI and ML technologies. <br> <br>
+                
+                I'm committed to staying updated in this rapidly changing field, eager to use my skills to solve problems, foster innovation, and contribute to the dynamic realm of AI. Proficient in Java, C/C++, Python, database management, web development, and networking, I'm ready to develop meaningful solutions in software.</p>
+              <a href="contact.html" class="read-more"><span>Hire me</span><i class="bi bi-arrow-right"></i></a>
+            </div>
 
-          My education has provided me with a good foundation in programming, data structures, and front end development, complemented by an knowledge of AI and ML technologies. <br> <br>
-          
-          I'm committed to staying updated in this rapidly changing field, eager to use my skills to solve problems, foster innovation, and contribute to the dynamic realm of AI. Proficient in Java, C/C++, Python, database management, web development, and networking, I'm ready to develop meaningful solutions in software.</p>
-        <a href="contact.html" class="read-more"><span>Hire me</span><i class="bi bi-arrow-right"></i></a>
-      </div>
+          </div>
 
-    </div>
+        </div>
 
-  </div>
-
-</section><!-- /About Section -->
+    </section>
+      <!-- /About Section -->
   
-      <!-- Why Us Section -->
-      <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
+      <!-- Skills Section -->
+    <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
   
         <div class="container-fluid">
   
@@ -458,9 +452,12 @@ footer h6::after {
   
         </div>
   
-      </section><!-- /Why Us Section -->
+    </section>
+      <!-- Skills Section -->
+      
 
-      <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
+      <!-- /Experience Section -->
+    <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
   
         <div class="container-fluid">
   
@@ -473,15 +470,12 @@ footer h6::after {
             <div class="col-lg-7 d-flex flex-column justify-content-center order-1 order-lg-2">
   
               <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-                <h3><span>Education</span><strong>:</strong></h3>
+                <h3><span>Experience</span><strong>:</strong></h3>
               </div>
 
               <div class="allSkills">
                 <ul>
-                  <li><strong>B. Tech </strong> Dayananda Sagar University, Bangalore <span>Computer Science Engineering Specialized in Artificial Intelligence & Machine Learning</span> <span>CGPA: 8.66</span> <span>From 2021 to (Expecting) 2025</span></li>
-                  <li><strong>PUC </strong> M. E. S. Pre University College, Sirsi <span>PCMCs - (Physics, Chemisrty, Mathematics, Computer Science)</span> <span>Percentage: 80%</span> <span>From 2019 to 2021</span></li>
-                  <li><strong>SSLC</strong> Ave Maria High School, Sirsi <span>NCERT - (National Council of Educational Research and Training)</span> <span>Percentage: 85.44%</span> <span>From 2016 to 2019</span></li>
-                  <li><strong>Primary</strong> Ave Maria Higher Primary School, Sirsi <span>NCERT - (National Council of Educational Research and Training)</span> <span></span> <span>Till 2016</span></li>
+                  <li><strong> Intern Test Automation Engineer </strong> <span> <br> <img src="images/logo_quantiphi.jpg" alt="logo" width="30px" height="30px"> Quantiphi, Bangalore</span> <span>From July 2025 (Present)</span></li>
                 </ul>
               </div>
   
@@ -490,14 +484,12 @@ footer h6::after {
   
         </div>
   
-      </section><!-- /Why Us Section -->
+    </section>
+      <!-- /Experience Section -->
 
 
-
-
-
-      <!-- Why Us Section -->
-      <!-- <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
+      <!-- Education Section -->
+    <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
   
         <div class="container-fluid">
   
@@ -506,14 +498,16 @@ footer h6::after {
             <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
   
               <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-                <h3><span>Certifications</span><strong>:</strong></h3>
+                <h3><span>Education</span><strong>:</strong></h3>
               </div>
 
               <div class="allSkills">
+
                 <ul>
-                  <li><strong>Complete JAVA and Data Structures and Algorithms</strong> <span>by Apna College</span> </li>
-                  <li><strong>Crash Course in Machine Learning</strong> <span>by Great Learning</span> </li>
-                  <li><strong>CSS Clearance Certificate </strong> <span>by HackerRank</span> </li>
+                  <li><strong>B. Tech </strong> Dayananda Sagar University, Bangalore <span>Computer Science Engineering Specialized in Artificial Intelligence & Machine Learning</span> <span>CGPA: 8.75</span> <span>From 2021 to 2025</span></li>
+                  <li><strong>PUC </strong> M. E. S. Pre University College, Sirsi <span>PCMCs - (Physics, Chemistry, Mathematics, Computer Science)</span> <span>Percentage: 80%</span> <span>From 2019 to 2021</span></li>
+                  <li><strong>SSLC</strong> Ave Maria High School, Sirsi <span>NCERT - (National Council of Educational Research and Training)</span> <span>Percentage: 85.44%</span> <span>From 2016 to 2019</span></li>
+                  <li><strong>Primary</strong> Ave Maria Higher Primary School, Sirsi <span>NCERT - (National Council of Educational Research and Training)</span> <span></span> <span>Till 2016</span></li>
                 </ul>
               </div>
   
@@ -526,20 +520,54 @@ footer h6::after {
   
         </div>
   
-      </section> -->
-      <!-- /Why Us Section -->
-
-
-
-      <footer>
-        <h6>2024 &copy; All Rights Reserved.</h6>
-      </footer>
-
+    </section>
+      <!-- Education Section -->
       
+      
+      <!-- Certifications Section -->
+    <section id="why-me" class="section why-me light-background mb-2" data-builder="section">
+
+        <div class="container-fluid">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-5 order-2 order-lg-1 why-me-img">
+              <img src="images/why-me.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+            </div>
+
+            <div class="col-lg-7 d-flex flex-column justify-content-center order-1 order-lg-2">
+
+              <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+                <h3><span>Certifications</span><strong>:</strong></h3>
+              </div>
+
+              <div class="allSkills">
+                <ul>
+                  <li><strong>Complete JAVA and Data Structures and Algorithms</strong> <span>by Apna College</span> </li>
+                  <li><strong>Crash Course in Machine Learning</strong> <span>by Great Learning</span> </li>
+                  <li><strong>CSS Clearance Certificate </strong> <span>by HackerRank</span> </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+    </section>
+      <!-- Certifications Section -->
+
+
+    
+
+    <footer>
+      <h6>2025 &copy; All Rights Reserved.</h6>
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-</body>
+  </body>
 </html>

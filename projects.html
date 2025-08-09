@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Chandan Neralgi</title>
@@ -12,201 +12,197 @@
     <link rel="stylesheet" href="css/animations.css">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+    
     <style>
-        body {
-            background: linear-gradient(45deg, #48a2f6, #6ab7ff, #9effff, #6ab7ff, #48a2f6);
-            background-size: 400% 400%;
-            animation: gradientBackground 5s ease infinite;
+      body {
+        background: linear-gradient(45deg, #48a2f6, #6ab7ff, #9effff, #6ab7ff, #48a2f6);
+        background-size: 400% 400%;
+        animation: gradientBackground 5s ease infinite;
+      }
+
+
+      /*--------------------------------------------------------------
+      # project Section
+      --------------------------------------------------------------*/
+      .project .project-member {
+        background-color: var(--surface-color);
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        border-radius: 5px;
+        transition: 0.5s;
+        padding: 20px;
+        padding-top: 30px;
+        height: 100%;
+      }
+
+      @media (max-width: 468px) {
+        .project .project-member {
+          flex-direction: column;
+          justify-content: center !important;
+          align-items: center !important;
         }
+      }
+
+      .project .project-member .pic {
+        width: 190px;
+        flex-shrink: 0;
+      }
+
+      .project .project-member .pic img {
+        transition: ease-in-out 0.3s;
+      }
+
+      .project .project-member:hover {
+        transform: translateY(-10px);
+      }
+
+      .project .project-member .member-info {
+        padding-left: 13px;
+      }
+
+      @media (max-width: 468px) {
+        .project .project-member .member-info {
+          padding: 30px 0 0 0;
+          text-align: center;
+        }
+      }
+
+      .project .project-member h4 {
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 20px;
+      }
+
+      .project .project-member span {
+        display: block;
+        font-size: 15px;
+        padding-bottom: 10px;
+        position: relative;
+        font-weight: 500;
+      }
+
+      .project .project-member span::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 1px;
+        background: color-mix(in srgb, var(--default-color), transparent 85%);
+        bottom: 0;
+        left: 0;
+      }
+
+      @media (max-width: 468px) {
+        .project .project-member span::after {
+          left: calc(50% - 25px);
+        }
+      }
+
+      .project .project-member p {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+      }
+
+      .project .project-member .social {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+      }
+
+      @media (max-width: 468px) {
+        .project .project-member .social {
+          justify-content: center;
+        }
+      }
+
+      .project .project-member .social a {
+        background: color-mix(in srgb, var(--default-color), transparent 94%);
+        transition: ease-in-out 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        width: 36px;
+        height: 36px;
+      }
+
+      .project .project-member .social a i {
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        font-size: 16px;
+        margin: 0 2px;
+      }
+
+      .project .project-member .social a:hover {
+        background: var(--accent-color);
+      }
+
+      .project .project-member .social a:hover i {
+        color: var(--contrast-color);
+      }
+
+      .project .project-member .social a+a {
+        margin-left: 8px;
+      }
 
 
-        /*--------------------------------------------------------------
-# project Section
---------------------------------------------------------------*/
-.project .project-member {
-  background-color: var(--surface-color);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  border-radius: 5px;
-  transition: 0.5s;
-  padding: 20px;
-  padding-top: 30px;
-  height: 100%;
-}
+      /*--------------------------------------------------------------
+      # Global Section Titles
+      --------------------------------------------------------------*/
+      .section-title {
+        text-align: center;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        position: relative;
+        font-family: cursive;
+      }
 
-@media (max-width: 468px) {
-  .project .project-member {
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-}
+      .section-title h2 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        position: relative;
+        font-family: "Oleo Script", cursive;
+      }
 
-.project .project-member .pic {
-  width: 190px;
-  flex-shrink: 0;
-}
+      .section-title h2:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 160px;
+        height: 1px;
+        background: color-mix(in srgb, var(--default-color), transparent 80%);
+        left: 0;
+        right: 0;
+        bottom: 1px;
+        margin: auto;
+      }
 
-.project .project-member .pic img {
-  transition: ease-in-out 0.3s;
-}
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: var(--accent-color);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
 
-.project .project-member:hover {
-  transform: translateY(-10px);
-}
-
-.project .project-member .member-info {
-  padding-left: 13px;
-}
-
-@media (max-width: 468px) {
-  .project .project-member .member-info {
-    padding: 30px 0 0 0;
-    text-align: center;
-  }
-}
-
-.project .project-member h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-}
-
-.project .project-member span {
-  display: block;
-  font-size: 15px;
-  padding-bottom: 10px;
-  position: relative;
-  font-weight: 500;
-}
-
-.project .project-member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 85%);
-  bottom: 0;
-  left: 0;
-}
-
-@media (max-width: 468px) {
-  .project .project-member span::after {
-    left: calc(50% - 25px);
-  }
-}
-
-.project .project-member p {
-  margin: 10px 0 0 0;
-  font-size: 14px;
-}
-
-.project .project-member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-}
-
-@media (max-width: 468px) {
-  .project .project-member .social {
-    justify-content: center;
-  }
-}
-
-.project .project-member .social a {
-  background: color-mix(in srgb, var(--default-color), transparent 94%);
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 36px;
-  height: 36px;
-}
-
-.project .project-member .social a i {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 16px;
-  margin: 0 2px;
-}
-
-.project .project-member .social a:hover {
-  background: var(--accent-color);
-}
-
-.project .project-member .social a:hover i {
-  color: var(--contrast-color);
-}
-
-.project .project-member .social a+a {
-  margin-left: 8px;
-}
-
-
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
-.section-title {
-  text-align: center;
-  padding-bottom: 40px;
-  padding-top: 20px;
-  position: relative;
-  font-family: cursive;
-}
-
-.section-title h2 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  position: relative;
-  font-family: "Oleo Script", cursive;
-}
-
-.section-title h2:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 160px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 80%);
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  margin: auto;
-}
-
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.section-title p {
-  margin-bottom: 0;
-}
-
-
-
-
-
-
+      .section-title p {
+        margin-bottom: 0;
+      }
 
 
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <header class="bg-dark text-white p-0">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -228,7 +224,7 @@
 
 
      <!-- Project Section -->
-     <section id="project" class="project section">
+    <section id="project" class="project section">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -409,7 +405,7 @@
   
         </div>
   
-      </section><!-- /project Section -->
+    </section><!-- /project Section -->
 
 
 
@@ -437,12 +433,12 @@
 
 
     <footer>
-      <h6>2024 &copy; All Rights Reserved.</h6>
+      <h6>2025 &copy; All Rights Reserved.</h6>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
